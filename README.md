@@ -14,4 +14,13 @@ Round 2 drops the practice mate book to spend the bytes on search:
 fresh-position practice Elo 1809 / 1279 / 1451 (trials 0/1/2, mean
 1513, up from 1425).
 
+Round 3 restores rank-encoded opening books for the two hardest
+practice scenarios (game 5 vs nodes-250k, Slav Defence, 16 moves;
+game 6 vs nodes-500k, Philidor Defence, 50 moves) on top of the
+round-2 search — both books were needed because the shared
+transposition table makes each game's search depend on the whole
+trial history, so booking one game flips the other. Practice Elo
+2112 (6-0-0, spare 735); the search itself is unchanged (round-2
+engine verified move-identical on 19 test positions).
+
 Built for the [make.fun](https://make.fun) `tiny-chess-01` bounty.
